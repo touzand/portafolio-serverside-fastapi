@@ -43,6 +43,10 @@ html = """
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
+@app.get("/")
+async def hello():
+    return {"hello":"world"}
+
 @app.get("/articles")
 async def read_articles():
     with open("static/articles.json", "r") as file:
