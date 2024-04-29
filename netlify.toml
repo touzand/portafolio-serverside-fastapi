@@ -1,7 +1,17 @@
-[build]
-    functions="functions"
+[tool.poetry]
+name = "railway-fastapi-template"
+version = "0.1.0"
+description = "This example starts up a FastAPI server"
+authors = ["DeviousLab <deviouslab@gmail.com>"]
+license = "MIT"
 
-[[redirects]]
-    to="/.netlify/functions/api:splat"
-    from="/*"
-    status=200 
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.80.0"
+uvicorn = "^0.18.3"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
